@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from './stateDispatch';
 import api from '../../api';
 import SelectsSection from './SelectsSection';
-import { Border, Stepper, Icon } from '../../components/ui';
+import { Border, Stepper, Icon, ReviewsStatic } from '../../components/UI';
 import Card from '../../components/Card';
 
 
@@ -48,7 +48,7 @@ class Home extends Component {
           <Card { ...activeItem } />
         }
         <Stepper steps={[true, true, false]} backolor='green' />
-        <Icon name="igloo" colorName="primary"/>
+        <ReviewsStatic iconName="coffee" colorName="primary" rate={3}/>
       </div>
     );
   }
