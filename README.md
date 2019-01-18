@@ -14,6 +14,7 @@ Check out the live [demo](http://my-coffee-beans.ksulourgeio.gr)
 1. In a terminal type ```yarn test``` to run your tests
 1. In a terminal type ```yarn flow``` to check for flow errors
 1. In a terminal type ```yarn elsint``` to check for lint mistakes
+1. In a terminal type ```yarn build``` to make a production ready build
 
 ## Project's Stack
 This project was created with Create React apps with no build configuration
