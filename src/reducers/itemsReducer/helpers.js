@@ -22,7 +22,6 @@ function updateByDisease(disease) {
   const [d, v] = disease.split(' ');
   let diseaseName = d.toLocaleLowerCase().replace('-','_');
   if(diseaseName === "coffee_berry") {
-    console.log(diseaseName);
     diseaseName += '_disease';
   }
   const value = v.toUpperCase();
