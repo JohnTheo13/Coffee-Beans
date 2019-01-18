@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 const StyledHeader = styled.div`
   background-color: ${({ theme: { primary } }) => primary};
-  width: 100%;
   padding: ${({ theme: { whitespaceM, whitespaceS }}) => `${whitespaceM} ${whitespaceS}`};
   > h1 {
     color: ${({ theme: { textWhite } }) => textWhite};

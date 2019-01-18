@@ -1,11 +1,15 @@
 // @flow
 import React from 'react' ;
 import styled from 'styled-components'
-import RatingContaiter from './RatingContaiter';
+import FlexContainer from './FlexContainer';
 import Icon from './Icon';
 
-const Extended = styled(RatingContaiter)`
+const Extended = styled(FlexContainer)`
   font-size: .65em;
+  width: 42%;
+  > i {
+    margin: auto;
+  }
 `;
 
 type BarType = {

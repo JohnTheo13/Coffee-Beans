@@ -1,7 +1,15 @@
 // @flow
 import React from 'react';
-import RatingContaiter from './RatingContaiter';
+import styled from 'styled-components';
+import FlexContainer from './FlexContainer';
 import Icon from './Icon';
+
+const ReviewContainer = styled(FlexContainer)`
+  width: 42%;
+  i {
+    font-size: ${({ theme: { whitespaceM }}) => whitespaceM}
+  }
+`;
 
 type ReviewType = {
   rate: 0 | 1 | 2 | 3 | 4,
@@ -14,7 +22,7 @@ type ReviewType = {
  */
 
 const ReviewsStatic = ({ rate, colorName, iconName }: ReviewType) => (
-  <RatingContaiter>
+  <ReviewContainer>
     {[...Array(5).keys()].map(num =>
       <Icon
         key={num}
@@ -22,7 +30,7 @@ const ReviewsStatic = ({ rate, colorName, iconName }: ReviewType) => (
         colorName={rate >= num ? colorName : 'grey'}
       />
     )}
-  </RatingContaiter>
+  </ReviewContainer>
 );
 
 export default ReviewsStatic;

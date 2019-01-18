@@ -19,12 +19,8 @@ const Line = styled.div`
   border-radius: 4px;
   width: 22%;
   margin: 3px;
-  background-color: ${({ backolor, theme }) => backolor ? backolor : theme.grey };
+  background-color: ${({ backolor, theme }) => backolor ? theme[backolor] : theme['grey'] };
 `;
-
-Line.defaultProps = {
-  theme: { grey: 'grey' }
-};
 
 type StepperType = {
   steps: Array<boolean>,

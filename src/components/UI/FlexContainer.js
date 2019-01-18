@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
-
-const RatingContaiter = styled.div`
+const FlexContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  * {
+    width: 95%;
+  }
 `;
 
-export default RatingContaiter;
+export default FlexContainer;
