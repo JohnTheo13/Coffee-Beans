@@ -64,7 +64,7 @@ const SelectsSections = ({
         onChange={onChange}
         placeholder="- Countries - "
         label="Countries:"
-        component={Select}
+        Component={Select}
       />
       <FormElement
         options={diseaseList}
@@ -72,14 +72,14 @@ const SelectsSections = ({
         onChange={onChange}
         placeholder="- Diseases - "
         label="Disease Resistances:"
-        component={Select}
+        Component={Select}
       />
       <Varieties
         name="active"
         onChange={onChange}
         placeholder="- Available Varieties - "
         label="Varieties:"
-        component={Select}
+        Component={Select}
       />
     </FlexContainer>
   )

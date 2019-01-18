@@ -18,10 +18,10 @@ const StyledContainer = styled.div`
     text-transform: capitalize;
   }
 `,
-  FormElement = ({ label, component, name, ...props }: ElementType) => (
+  FormElement = ({ label, Component, name, ...props }: ElementType) => (
     <StyledContainer>
       <label htmlFor={name}>{label}</label>
-      {component({ ...props, name })}
+      <Component { ...props } name={name}/>
     </StyledContainer>
   );
 
