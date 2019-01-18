@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { FormElement, Select} from '../../components/Forms';
+import { FormElement, Select} from '../../../components/Forms';
 import { connect } from 'react-redux';
-import diseaseList from './diseaeseList';
-import { varieties } from '../../reducers/itemsReducer/helpers';
+import { diseaseList } from '../diseaeseList';
+import { varieties } from '../../../reducers/itemsReducer/helpers';
 
 const FlexContainer = styled.div`
   display: flex;

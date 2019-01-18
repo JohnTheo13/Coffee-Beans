@@ -10,4 +10,26 @@ const diseaseList = [
   "Nematodes Susceptible"
 ];
 
-export default diseaseList;
+const active = {
+  "name": "Pacas",
+  "description": "Very high susceptibility to coffee leaf rust.",
+  "bean_size": "AVERAGE",
+  "quality_potential": "GOOD",
+  "yield": "GOOD",
+  "disease_resistance": [
+    {
+      "leaf_rust": "RESISTANT"
+    },
+    {
+      "coffee_berry_disease": "SUSCEPTIBLE"
+    },
+    {
+      "nematodes": "TOLERANT"
+    }
+  ],
+  "producing_countries": [
+    "Honduras"
+  ]
+}
+
+export {diseaseList, active};
