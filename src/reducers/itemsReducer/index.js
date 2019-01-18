@@ -1,4 +1,4 @@
-import { updateByCountry, varieties, updateByDisease } from './helpers';
+import { updateByCountry, updateByDisease } from './helpers';
 import {
   ITEMS_FETCHING,
   ITEMS_FETCHED,

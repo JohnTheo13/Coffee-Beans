@@ -20,4 +20,10 @@ export type CoffeeType = {
 }
 
 
-export { ItemType, ImageType } from './ItemTypes';
+export {
+  CoffeeType,
+  Resistance,
+  BeanSize,
+  Quality,
+  Yield
+};

@@ -23,7 +23,7 @@ type BarType = {
  * @param {*} rate <= 3 
  */
 
-const SizeBar = ({ iconName, rate, colorName }) => (
+const SizeBar = ({ iconName, rate, colorName }: BarType) => (
   <Extended>
     {[...Array(4).keys()].map(num => 
       <Icon
