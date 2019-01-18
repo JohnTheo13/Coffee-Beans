@@ -1,12 +1,7 @@
 // @flow
 import React from 'react';
-import styled from 'styled-components';
+import RatingContaiter from './RatingContaiter';
 import Icon from './Icon';
-
-const ReviewsContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
 
 type ReviewType = {
   rate: 0 | 1 | 2 | 3 | 4,
@@ -19,7 +14,7 @@ type ReviewType = {
  */
 
 const ReviewsStatic = ({ rate, colorName, iconName }: ReviewType) => (
-  <ReviewsContainer>
+  <RatingContaiter>
     {[...Array(5).keys()].map(num =>
       <Icon
         key={num}
@@ -27,7 +22,7 @@ const ReviewsStatic = ({ rate, colorName, iconName }: ReviewType) => (
         colorName={rate >= num ? colorName : 'grey'}
       />
     )}
-  </ReviewsContainer>
+  </RatingContaiter>
 );
 
 export default ReviewsStatic;
