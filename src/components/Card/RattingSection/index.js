@@ -5,8 +5,8 @@ import { Border } from '../../UI';
 const RattingSection = ({ title, value, Component}) => (
   <SectionContainer>
     <Border />
-    <h4>{title}</h4>
-    <p>{value}</p>
+    <h4>{title.replace('_', ' ').replace('_', ' ').toUpperCase()}</h4>
+    <p>{value.replace('_', ' ').toLowerCase()}</p>
     <Component />
   </SectionContainer>
 );
