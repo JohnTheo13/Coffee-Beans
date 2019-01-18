@@ -5,11 +5,11 @@ import { Border } from '../../UI';
 
 type Ratting = {
   title: string,
-  value: string,
+  value?: string,
   Component: StatelessFunctionalComponent
 }
 
-const RattingSection = ({ title, value, Component }: Ratting) => (
+const RattingSection = ({ title, value = '', Component }: Ratting) => (
   <SectionContainer>
     <Border />
     <h4>{title.replace('_', ' ').replace('_', ' ').toUpperCase()}</h4>
