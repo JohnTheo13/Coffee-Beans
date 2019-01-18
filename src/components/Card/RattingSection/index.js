@@ -1,8 +1,15 @@
-import React from 'react';
+// @flow
+import React, { type StatelessFunctionalComponent }from 'react';
 import { SectionContainer } from '../Styled';
 import { Border } from '../../UI';
 
-const RattingSection = ({ title, value, Component}) => (
+type Ratting = {
+  title: string,
+  value: string,
+  Component: StatelessFunctionalComponent
+}
+
+const RattingSection = ({ title, value, Component }: Ratting) => (
   <SectionContainer>
     <Border />
     <h4>{title.replace('_', ' ').replace('_', ' ').toUpperCase()}</h4>

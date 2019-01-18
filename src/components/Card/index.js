@@ -1,14 +1,16 @@
+// @flow
 import React from 'react';
 import Header from '../Header';
 import { StyledCard } from './Styled';
 import { FirstFlexContainer, SecondFlexContainer } from './FlexContainers';
+import { CoffeeType } from '../../types';
 
 const Card = ({
   name,
   description,
   disease_resistance,
   ...props
-}) => (
+}: CoffeeType) => (
   <StyledCard>
     <Header header={name} />
     <p>{description}</p>

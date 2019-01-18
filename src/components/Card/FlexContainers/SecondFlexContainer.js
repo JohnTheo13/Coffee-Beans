@@ -1,12 +1,11 @@
-import React from 'react';
+// @flow
+import React, { type StatelessFunctionalComponent} from 'react';
 import { rateArrays, colorHelper} from '../helpers';
 import { Stepper, FlexContainer } from '../../UI';
 import RattingSection from '../RattingSection';
-import { diseaseChange } from '../../../reducers/itemsReducer/actions';
 
-const diseaseMap = d => {
+const diseaseMap = (d: Object): StatelessFunctionalComponent => {
   const [disease] = Object.entries(d);
-  console.log(disease)
   return (
     <RattingSection
       key={disease.join('-')}
@@ -21,7 +20,7 @@ const diseaseMap = d => {
   )
 }
 
-const SecondFlexContainer = ({ diseases }) => (
+const SecondFlexContainer = ({ diseases }: Array<Object>) => (
   <FlexContainer>
     {diseases.map(diseaseMap)}
   </FlexContainer>

@@ -4,12 +4,26 @@ import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from './stateDispatch';
 import api from '../../api';
 import SelectsSection from './components/SelectsSection';
-import { Border, Stepper, Icon, ReviewsStatic, SizeBar } from '../../components/UI';
 import Card from '../../components/Card';
-import { active } from './diseaeseList';
+import { CoffeeType } from '../../types';
+
+type Props = {
+  startFetchingItems: Function,
+  itemsFetched: Function,
+  failedFetch: Function,
+  countryChange: Function,
+  diseaseChange: Function,
+  activeChanged: Function,
+  clear: Function,
+  items: {
+    fetched: boolean,
+    activeItem?: CoffeeType,
+    countriesList: Array<string> 
+  }
+}
 
 
-class Home extends Component {
+class Home extends Component<Props, {}> {
   async componentDidMount() {
     const {
       startFetchingItems, itemsFetched, failedFetch,
@@ -25,12 +39,13 @@ class Home extends Component {
   }
 
   render() { 
-    const { countryChange,
+    const {
+      countryChange,
       diseaseChange,
       clear,
       activeChanged,
       items: {
-      fetching, fetched, failedFetch, activeItem, countriesList
+      fetched, activeItem, countriesList
     } } = this.props;
 
     return (

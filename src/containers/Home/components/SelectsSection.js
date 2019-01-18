@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+// @flow
+import React from 'react';
 import styled from 'styled-components';
 import { FormElement, Select} from '../../../components/Forms';
 import { connect } from 'react-redux';
@@ -9,10 +10,19 @@ const FlexContainer = styled.div`
   display: flex;
   justify-content: space-around;
 `;
+
 /**
  * To prevent the hole section from rerenderin
  */
 const Varieties = connect(({ items:{ activeList } }) => ({ options: activeList.map(varieties) }))(FormElement);
+
+type Selects = {
+  countriesList: Array<string>,
+  countryChange: Function,
+  diseaseChange: Function,
+  clear: Function,
+  activeChanged: Function
+}
 
 const SelectsSections = ({
   countriesList,
@@ -20,7 +30,7 @@ const SelectsSections = ({
   diseaseChange,
   clear,
   activeChanged
- }) => {
+ }: Selects) => {
 
   const onChange = e => {
     e.preventDefault();

@@ -1,9 +1,17 @@
+// @flow
 import React from 'react';
 import { qualities, yields, beanSize } from '../helpers';
 import { ReviewsStatic, SizeBar, FlexContainer } from '../../UI';
 import RattingSection from '../RattingSection';
+import { BeanSize, Quality, Yield } from '../../../types';
 
-const FirstFlexContainer = ({ bean_size, quality_potential, ...props}) => (
+type FirstType = {
+  bean_size: BeanSize,
+  quality_potential: Quality,
+  yield: Yield
+};
+
+const FirstFlexContainer = ({ bean_size, quality_potential, ...props }: FirstType) => (
   <FlexContainer>
     <RattingSection
       title="BEAN SIZE" //Note: use object keys in the future
