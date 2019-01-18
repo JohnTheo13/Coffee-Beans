@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from './stateDispatch';
 import api from '../../api';
 import SelectsSection from './SelectsSection';
-import Border from '../../components/ui/Border';
-import Stepper from '../../components/ui/Stepper';
+import { Border, Stepper, Icon, ReviewsStatic, SizeBar } from '../../components/UI';
 import Card from '../../components/Card';
 
 
@@ -49,7 +48,8 @@ class Home extends Component {
           <Card { ...activeItem } />
         }
         <Stepper steps={[true, true, false]} backolor='green' />
-        <Border />
+        <ReviewsStatic iconName="coffee" colorName="primary" rate={3}/>
+        <SizeBar iconName="football-ball" colorName="orange" rate={2}/>
       </div>
     );
   }
